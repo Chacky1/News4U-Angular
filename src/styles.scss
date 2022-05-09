@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'indie-flower';
+    src: url('./assets/fonts/IndieFlower-Regular.ttf') format('truetype');
+}
+  
+$color-1: #F9DBD2;
+$color-2: #F05467;
+$color-3: #FBCE5B;
+$color-4: #C5DEF0;
+$color-5: white;
+  
+* {
+    margin: 0;
+    font-family: 'indie-flower', sans-serif;
+}
+  
+body {
+    margin: 0;
+    font-size: 16px;
+}

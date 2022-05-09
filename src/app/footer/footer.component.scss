@@ -1,0 +1,12 @@
+.footer {
+    background-color: #F05467;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &__creator {
+      font-size: 1.2em;
+      color: white;
+    }
+}
