@@ -1,0 +1,25 @@
+<div class="posts">
+    <h2 class="posts__title">
+        Les articles
+    </h2>
+
+    <div class="posts__content-wrapper">
+        <div class="posts-content">
+            <div class="post-card" *ngFor="let post of posts; let i = index" (click)="readPost(i)">
+                <div class="post-card__image">
+                    <img *ngIf="post.image" [src]="post.image" [alt]="post.title" />
+                </div>
+
+                <div class="post-card__content">
+                    <h3 class="post-card__title">{{ post.title }}</h3>
+                    <p class="post-card__description">{{ post.text | slice:0:150 }}...</p>
+                    <p class="post-card__author">Écris par : {{ post.author }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="posts__add-post">
+        <button type="button" (click)="createPost()">Créer un nouvel article</button>
+    </div>
+</div>

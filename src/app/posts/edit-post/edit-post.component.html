@@ -1,0 +1,19 @@
+<div class="post-edit">
+    <h2 class="post-edit__title">{{ post.title }}</h2>
+
+    <div class="post-edit__image">
+        <img [src]="post.image" [alt]="post.title" />
+    </div>
+
+    <div class="post-edit__content">
+        <textarea [(ngModel)]="post.text" rows="5"></textarea>
+    </div>
+
+    <div class="post-edit__author">
+        <p>Article rédigé par {{ post.author }}</p>
+    </div>
+
+    <div class="post-edit__submit">
+        <button (click)="submitEdit()">Valider la modification</button>
+    </div>
+</div>

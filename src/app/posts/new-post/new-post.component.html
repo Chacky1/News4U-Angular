@@ -1,0 +1,29 @@
+<div class="new-post">
+    <h2 class="new-post__title">
+        Nouvel article
+    </h2>
+
+    <form class="new-post-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="new-post-form__title">
+            <label for="title">Titre du nouvel article</label>
+            <br />
+            <input type="text" id="title" name="title" ngModel required />
+        </div>
+
+        <div class="new-post-form__image">
+            <label for="image">Lien d'une image pour l'article</label>
+            <br />
+            <input type="text" id="image" name="image" ngModel />
+        </div>
+
+        <div class="new-post-form__content">
+            <label for="content">Contenu de l'article</label>
+            <br />
+            <textarea name="content" id="content" rows="10" required ngModel></textarea>
+        </div>
+
+        <div class="new-post-form__submit">
+            <input type="submit" value="Créer le nouvel article" [disabled]="f.invalid" />
+        </div>
+    </form>
+</div>

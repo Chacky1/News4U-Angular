@@ -1,0 +1,112 @@
+.posts {
+    padding: 8vh 0;
+
+    &__title {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 5vh;
+    }
+
+    &__content-wrapper {
+        width: 80%;
+        margin: auto; 
+    }
+
+    &__add-post {
+        display: flex;
+        justify-content: center;
+        margin: 3vh 0;
+
+        button {
+            background-color: #F05467;
+            padding: 20px 40px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: #F05467;
+            }
+        }
+    }
+}
+
+.posts-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card {
+    display: flex;
+    margin: 30px 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(251, 195, 195);
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    &__image {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+
+            @media screen and (max-width: 1200px) {
+                width: 200px;
+            }
+
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 1.5em;
+
+        @media screen and (max-width: 992px) {
+            margin: 3vh;
+        }
+    }
+
+    &__description {
+        font-size: 1.2em;
+
+        @media screen and (max-width: 992px) {
+            margin: 3vh;
+        }
+    }
+
+    &__author {
+        font-size: 1.2em;
+
+        @media screen and (max-width: 992px) {
+            margin: 3vh;
+        }
+    }
+}
